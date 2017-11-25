@@ -9,7 +9,11 @@ public class JoystickDriveCommand extends Command {
 	//See BasicAutonomousCommand.java for comments focused on methods inherited from the Command class
 
 	Joystick joystick = Robot.oi.getJoystick();
-
+	
+	public JoystickDriveCommand(){
+		requires(Robot.driveSubsystem);
+	}
+	
 	@Override
 	public void execute(){
 		//From the joystick, take the y value and use it to determine how quickly the robot will drive
