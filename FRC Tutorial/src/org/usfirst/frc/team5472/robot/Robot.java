@@ -72,6 +72,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
 		chooser.addDefault("Drive Straight", new BasicAutonomousCommand());
 		chooser.addObject("No Auto", new NullAutonomousCommand());
+		autonomousCommand = new NullAutonomousCommand();
 	}
 
 	@Override
